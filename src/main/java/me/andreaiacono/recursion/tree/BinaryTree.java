@@ -24,14 +24,14 @@ public class BinaryTree {
         rightRight.left = rightRightLeft;
 
         System.out.print("\nPreOrder: ");
-        traversePreOrder(root);
+        preOrder(root);
         System.out.print("\nInOrder: ");
-        traverseInOrder(root);
+        inOrder(root);
         System.out.print("\nPostPreOrder: ");
-        traversePostOrder(root);
+        postOrder(root);
     }
 
-    private static void traversePreOrder(Node current) {
+    private static void preOrder(Node current) {
 
         // base case
         if (current == null) {
@@ -42,11 +42,11 @@ public class BinaryTree {
         System.out.print(current.val + ", ");
 
         // processes the left and then the right children
-        traversePreOrder(current.left);
-        traversePreOrder(current.right);
+        preOrder(current.left);
+        preOrder(current.right);
     }
 
-    private static void traverseInOrder(Node current) {
+    private static void inOrder(Node current) {
 
         // base case
         if (current == null) {
@@ -54,16 +54,16 @@ public class BinaryTree {
         }
 
         // processes the left child
-        traverseInOrder(current.left);
+        inOrder(current.left);
 
         // processes the node
         System.out.print(current.val + ", ");
 
         // // processes then right children
-        traverseInOrder(current.right);
+        inOrder(current.right);
     }
 
-    private static void traversePostOrder(Node current) {
+    private static void postOrder(Node current) {
 
         // base case
         if (current == null) {
@@ -71,8 +71,8 @@ public class BinaryTree {
         }
 
         // processes the left child and then the right child
-        traversePostOrder(current.left);
-        traversePostOrder(current.right);
+        postOrder(current.left);
+        postOrder(current.right);
 
         // processes the node
         System.out.print(current.val + ", ");
