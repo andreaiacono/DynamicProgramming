@@ -1,4 +1,4 @@
-package me.andreaiacono.graph;
+package me.andreaiacono.recursion.graph;
 
 import java.util.*;
 
