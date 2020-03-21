@@ -1,24 +1,24 @@
 package me.andreaiacono.recursion.subset;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SubsetFinder {
 
     public static void main(String[] args) {
 
+        SubsetFinder subsetFinder = new SubsetFinder();
         char[] set = new char[]{'A', 'B', 'C', 'D'};
         int size = 2;
 
-        System.out.println(subsets(0, new ArrayList<>(), set, size));
+        System.out.println(subsetFinder.subsets(0, new ArrayList<>(), set, size));
     }
 
-    private static List<List<Character>> subsets(int currentIndex, List<Character> partialResult, char[] set, int size) {
+    List<List<Character>> subsets(int currentIndex, List<Character> partialResult, char[] set, int size) {
 
         // base case, we reached the desired size
         if (partialResult.size() == size) {
-            return Arrays.asList(new ArrayList<>(partialResult));
+            return List.of(new ArrayList<>(partialResult));
         }
 
         // recursive case
