@@ -11,7 +11,7 @@ class SubsetFinderTest {
     @Test
     void computesCorrectValuesOfSizeTwoTest() {
 
-        char[] set = new char[]{'A', 'B', 'C', 'D', 'E', 'F'};
+        List<Character> set = List.of('A', 'B', 'C', 'D', 'E', 'F');
         int size = 2;
         var result = new SubsetFinder().subsets(0, new ArrayList<>(), set, size);
 
@@ -39,7 +39,7 @@ class SubsetFinderTest {
     @Test
     void computesCorrectValuesOfSizeThreeTest() {
 
-        char[] set = new char[]{'A', 'B', 'C', 'D', 'E'};
+        List<Character> set = List.of('A', 'B', 'C', 'D', 'E');
         int size = 3;
         var result = new SubsetFinder().subsets(0, new ArrayList<>(), set, size);
 
